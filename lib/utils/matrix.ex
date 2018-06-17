@@ -1,12 +1,8 @@
 defmodule Matrix do
 	use GenServer
-	defstruct dim1: 3,
-			  dim2: 3,
-			  body: [
-			  	[0,0,0],
-			  	[0,0,0],
-			  	[0,0,0]
-			  ]
+	defstruct column_dimension: 3,
+			     row_dimension: 3,
+			  body: Matrix.make_matrix(nil, Matrix.__struct__.dim1, Matrix.__struct__.dim2)
 
 	def set(row,col) do
 	end
